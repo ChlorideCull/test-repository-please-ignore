@@ -2,8 +2,10 @@
 	<head>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/UAParser.js/0.7.12/ua-parser.js"></script>
 		<script>
-			var bwsr = UAParser().browser;
-			document.body.children[0].innerText = bwsr.name + " " + bwsr.version;
+			document.onload = function() {
+				var bwsr = UAParser().browser;
+				document.body.children[0].innerText = bwsr.name + " " + bwsr.version;
+			};
 		</script>
 	</head>
 	<body>
